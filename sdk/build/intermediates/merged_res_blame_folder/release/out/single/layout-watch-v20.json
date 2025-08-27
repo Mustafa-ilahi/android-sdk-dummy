@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.alterna.sdk-merged_res-47:/layout-watch-v20/abc_alert_dialog_title_material.xml",
+        "source": "com.alterna.sdk-appcompat-1.6.1-2:/layout-watch-v20/abc_alert_dialog_title_material.xml"
+    },
+    {
+        "merged": "com.alterna.sdk-merged_res-47:/layout-watch-v20/abc_alert_dialog_button_bar_material.xml",
+        "source": "com.alterna.sdk-appcompat-1.6.1-2:/layout-watch-v20/abc_alert_dialog_button_bar_material.xml"
+    }
+]

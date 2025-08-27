@@ -1,0 +1,66 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml:2:1-35:12
+	package
+		INJECTED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml:3:5-51
+	xmlns:android
+		ADDED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml:6:5-79
+	android:name
+		ADDED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml:6:22-76
+application
+ADDED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml:8:5-33:19
+	android:supportsRtl
+		ADDED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml:10:9-35
+	tools:targetApi
+		ADDED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml:11:9-29
+	android:allowBackup
+		ADDED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml:9:9-35
+activity#com.alterna.sdk.ui.OnboardingActivity
+ADDED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml:13:9-16:55
+	android:exported
+		ADDED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml:15:13-37
+	android:theme
+		ADDED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml:16:13-52
+	android:name
+		ADDED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml:14:13-50
+activity#com.alterna.sdk.ui.UserDetailsActivity
+ADDED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml:18:9-21:55
+	android:exported
+		ADDED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml:20:13-37
+	android:theme
+		ADDED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml:21:13-52
+	android:name
+		ADDED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml:19:13-51
+activity#com.alterna.sdk.ui.WithdrawalActivity
+ADDED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml:23:9-26:55
+	android:exported
+		ADDED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml:26:13-52
+	android:name
+		ADDED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml:24:13-50
+activity#com.alterna.sdk.ui.SuccessActivity
+ADDED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml:28:9-31:55
+	android:exported
+		ADDED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml:30:13-37
+	android:theme
+		ADDED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml:31:13-52
+	android:name
+		ADDED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml:29:13-47
+uses-sdk
+INJECTED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml
+INJECTED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/mustafailahi/Desktop/android-sdk/sdk/src/main/AndroidManifest.xml

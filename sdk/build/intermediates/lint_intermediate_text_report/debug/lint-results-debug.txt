@@ -1,0 +1,325 @@
+/Users/mustafailahi/Desktop/android-sdk/sdk/build.gradle:13: Warning: Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details. [OldTargetApi]
+        targetSdk 34
+        ~~~~~~~~~~~~
+
+   Explanation for issues of type "OldTargetApi":
+   When your application runs on a version of Android that is more recent than
+   your targetSdkVersion specifies that it has been tested with, various
+   compatibility modes kick in. This ensures that your application continues
+   to work, but it may look out of place. For example, if the targetSdkVersion
+   is less than 14, your app may get an option button in the UI.
+
+   To fix this issue, set the targetSdkVersion to the highest available value.
+   Then test your app to make sure everything works correctly. You may want to
+   consult the compatibility notes to see what changes apply to each version
+   you are adding support for:
+   https://developer.android.com/reference/android/os/Build.VERSION_CODES.html
+   as well as follow this guide:
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.
+   html
+
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.html
+
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/SuccessActivity.kt:68: Warning: To get local formatting use getDateInstance(), getDateTimeInstance(), or getTimeInstance(), or use new SimpleDateFormat(String template, Locale locale) with for example Locale.US for ASCII dates. [SimpleDateFormat]
+            Date: ${java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(java.util.Date())}
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/SuccessActivity.kt:68: Warning: To get local formatting use getDateInstance(), getDateTimeInstance(), or getTimeInstance(), or use new SimpleDateFormat(String template, Locale locale) with for example Locale.US for ASCII dates. [SimpleDateFormat]
+            Date: ${java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(java.util.Date())}
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SimpleDateFormat":
+   Almost all callers should use getDateInstance(), getDateTimeInstance(), or
+   getTimeInstance() to get a ready-made instance of SimpleDateFormat suitable
+   for the user's locale. The main reason you'd create an instance this class
+   directly is because you need to format/parse a specific machine-readable
+   format, in which case you almost certainly want to explicitly ask for US to
+   ensure that you get ASCII digits (rather than, say, Arabic digits).
+
+   Therefore, you should either use the form of the SimpleDateFormat
+   constructor where you pass in an explicit locale, such as Locale.US, or use
+   one of the get instance methods, or suppress this error if really know what
+   you are doing.
+
+   https://developer.android.com/reference/java/text/SimpleDateFormat.html
+
+/Users/mustafailahi/Desktop/android-sdk/sdk/build.gradle:35: Warning: A newer version of androidx.core:core-ktx than 1.12.0 is available: 1.17.0 [GradleDependency]
+    implementation 'androidx.core:core-ktx:1.12.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/build.gradle:36: Warning: A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.1 [GradleDependency]
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/build.gradle:37: Warning: A newer version of com.google.android.material:material than 1.10.0 is available: 1.12.0 [GradleDependency]
+    implementation 'com.google.android.material:material:1.10.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/build.gradle:38: Warning: A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1 [GradleDependency]
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/build.gradle:39: Warning: A newer version of androidx.lifecycle:lifecycle-viewmodel-ktx than 2.6.2 is available: 2.9.2 [GradleDependency]
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/build.gradle:40: Warning: A newer version of androidx.lifecycle:lifecycle-livedata-ktx than 2.6.2 is available: 2.9.2 [GradleDependency]
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.2'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/build.gradle:41: Warning: A newer version of androidx.navigation:navigation-fragment-ktx than 2.7.4 is available: 2.9.3 [GradleDependency]
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.7.4'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/build.gradle:42: Warning: A newer version of androidx.navigation:navigation-ui-ktx than 2.7.4 is available: 2.9.3 [GradleDependency]
+    implementation 'androidx.navigation:navigation-ui-ktx:2.7.4'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/build.gradle:45: Warning: A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.3.0 [GradleDependency]
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/build.gradle:46: Warning: A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.7.0 [GradleDependency]
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/SuccessActivity.kt:58: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        tvTransactionId.text = "Transaction ID: $transactionId"
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/SuccessActivity.kt:58: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        tvTransactionId.text = "Transaction ID: $transactionId"
+                                ~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/SuccessActivity.kt:59: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        tvStatus.text = "Status: Processing"
+                         ~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/SuccessActivity.kt:60: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        tvMessage.text = "Your withdrawal request has been submitted successfully and is being processed."
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/SuccessActivity.kt:63: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        tvReceipt.text = """
+                         ^
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/SuccessActivity.kt:64: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            Receipt Details:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/SuccessActivity.kt:66: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            Transaction ID: $transactionId
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/SuccessActivity.kt:67: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            Amount: $500.00
+~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/SuccessActivity.kt:67: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            Amount: $500.00
+                     ~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/SuccessActivity.kt:68: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            Date: ${java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(java.util.Date())}
+~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/SuccessActivity.kt:69: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            Type: Withdrawal
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/SuccessActivity.kt:70: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            Status: Processing
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/SuccessActivity.kt:72: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            Please wait while we process your request.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/SuccessActivity.kt:73: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            You will receive a confirmation once completed.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/UserDetailsActivity.kt:71: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            tvUsername.text = "Welcome, ${session.username}"
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/UserDetailsActivity.kt:71: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            tvUsername.text = "Welcome, ${session.username}"
+                               ~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/UserDetailsActivity.kt:74: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            tvSalary.text = "Salary: $5,000.00"
+                            ~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/UserDetailsActivity.kt:74: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            tvSalary.text = "Salary: $5,000.00"
+                             ~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/UserDetailsActivity.kt:74: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            tvSalary.text = "Salary: $5,000.00"
+                                      ~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/UserDetailsActivity.kt:75: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            tvWithdrawalLimit.text = "Withdrawal Limit: $1,000.00"
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/UserDetailsActivity.kt:75: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            tvWithdrawalLimit.text = "Withdrawal Limit: $1,000.00"
+                                      ~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/UserDetailsActivity.kt:75: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            tvWithdrawalLimit.text = "Withdrawal Limit: $1,000.00"
+                                                         ~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/UserDetailsActivity.kt:79: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                tvEligibility.text = "Status: Eligible ✓"
+                                      ~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/UserDetailsActivity.kt:82: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                tvEligibility.text = "Status: Not Eligible ✗"
+                                      ~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/UserDetailsActivity.kt:115: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        tvTransactionHistory.text = "Recent Transactions:\n$transactionText"
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/UserDetailsActivity.kt:115: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        tvTransactionHistory.text = "Recent Transactions:\n$transactionText"
+                                     ~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/WithdrawalActivity.kt:77: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        tvWithdrawalLimit.text = "Available Withdrawal Limit: $1,000.00"
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/WithdrawalActivity.kt:77: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        tvWithdrawalLimit.text = "Available Withdrawal Limit: $1,000.00"
+                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/WithdrawalActivity.kt:77: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        tvWithdrawalLimit.text = "Available Withdrawal Limit: $1,000.00"
+                                                               ~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/WithdrawalActivity.kt:78: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        tvDailyLimit.text = "Daily Limit: $500.00"
+                            ~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/WithdrawalActivity.kt:78: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        tvDailyLimit.text = "Daily Limit: $500.00"
+                             ~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/java/com/alterna/sdk/ui/WithdrawalActivity.kt:78: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        tvDailyLimit.text = "Daily Limit: $500.00"
+                                           ~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_onboarding.xml:13: Warning: Hardcoded string "SDK", should use @string resource [HardcodedText]
+        android:text="SDK"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_onboarding.xml:22: Warning: Hardcoded string "Step 1: Onboard / Login", should use @string resource [HardcodedText]
+        android:text="Step 1: Onboard / Login"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_onboarding.xml:37: Warning: Hardcoded string "Username", should use @string resource [HardcodedText]
+            android:hint="Username"
+            ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_onboarding.xml:53: Warning: Hardcoded string "Password", should use @string resource [HardcodedText]
+            android:hint="Password"
+            ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_onboarding.xml:62: Warning: Hardcoded string "Login", should use @string resource [HardcodedText]
+        android:text="Login"
+        ~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_onboarding.xml:70: Warning: Hardcoded string "Exit SDK", should use @string resource [HardcodedText]
+        android:text="Exit SDK"
+        ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_onboarding.xml:77: Warning: Hardcoded string "Create a session for user", should use @string resource [HardcodedText]
+        android:text="Create a session for user"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_success.xml:19: Warning: Hardcoded string "Success Icon", should use @string resource [HardcodedText]
+            android:contentDescription="Success Icon" />
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_success.xml:24: Warning: Hardcoded string "Success!", should use @string resource [HardcodedText]
+            android:text="Success!"
+            ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_success.xml:34: Warning: Hardcoded string "Status: Processing", should use @string resource [HardcodedText]
+            android:text="Status: Processing"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_success.xml:43: Warning: Hardcoded string "Transaction ID: Unknown", should use @string resource [HardcodedText]
+            android:text="Transaction ID: Unknown"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_success.xml:52: Warning: Hardcoded string "Your withdrawal request has been submitted successfully and is being processed.", should use @string resource [HardcodedText]
+            android:text="Your withdrawal request has been submitted successfully and is being processed."
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_success.xml:74: Warning: Hardcoded string "Receipt", should use @string resource [HardcodedText]
+                    android:text="Receipt"
+                    ~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_success.xml:83: Warning: Hardcoded string "Loading receipt...", should use @string resource [HardcodedText]
+                    android:text="Loading receipt..."
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_success.xml:103: Warning: Hardcoded string "Go to Homepage", should use @string resource [HardcodedText]
+                android:text="Go to Homepage"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_success.xml:112: Warning: Hardcoded string "Exit SDK", should use @string resource [HardcodedText]
+                android:text="Exit SDK"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_success.xml:122: Warning: Hardcoded string "Show receipt and inform user that transaction is in process or completed", should use @string resource [HardcodedText]
+            android:text="Show receipt and inform user that transaction is in process or completed"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_user_details.xml:16: Warning: Hardcoded string "Display User Details", should use @string resource [HardcodedText]
+            android:text="Display User Details"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_user_details.xml:39: Warning: Hardcoded string "Welcome, User", should use @string resource [HardcodedText]
+                    android:text="Welcome, User"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_user_details.xml:48: Warning: Hardcoded string "Salary: $0.00", should use @string resource [HardcodedText]
+                    android:text="Salary: $0.00"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_user_details.xml:56: Warning: Hardcoded string "Withdrawal Limit: $0.00", should use @string resource [HardcodedText]
+                    android:text="Withdrawal Limit: $0.00"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_user_details.xml:64: Warning: Hardcoded string "Status: Checking...", should use @string resource [HardcodedText]
+                    android:text="Status: Checking..."
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_user_details.xml:88: Warning: Hardcoded string "Transaction History", should use @string resource [HardcodedText]
+                    android:text="Transaction History"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_user_details.xml:97: Warning: Hardcoded string "Loading transactions...", should use @string resource [HardcodedText]
+                    android:text="Loading transactions..."
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_user_details.xml:116: Warning: Hardcoded string "Withdrawal Page", should use @string resource [HardcodedText]
+                android:text="Withdrawal Page"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_user_details.xml:125: Warning: Hardcoded string "Logout", should use @string resource [HardcodedText]
+                android:text="Logout"
+                ~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_user_details.xml:136: Warning: Hardcoded string "Exit SDK", should use @string resource [HardcodedText]
+            android:text="Exit SDK"
+            ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_withdrawal.xml:16: Warning: Hardcoded string "Withdrawal Page", should use @string resource [HardcodedText]
+            android:text="Withdrawal Page"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_withdrawal.xml:38: Warning: Hardcoded string "Withdrawal Limits", should use @string resource [HardcodedText]
+                    android:text="Withdrawal Limits"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_withdrawal.xml:47: Warning: Hardcoded string "Available Withdrawal Limit: $0.00", should use @string resource [HardcodedText]
+                    android:text="Available Withdrawal Limit: $0.00"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_withdrawal.xml:55: Warning: Hardcoded string "Daily Limit: $0.00", should use @string resource [HardcodedText]
+                    android:text="Daily Limit: $0.00"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_withdrawal.xml:78: Warning: Hardcoded string "Enter Withdrawal Amount", should use @string resource [HardcodedText]
+                    android:text="Enter Withdrawal Amount"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_withdrawal.xml:92: Warning: Hardcoded string "Amount ($)", should use @string resource [HardcodedText]
+                        android:hint="Amount ($)"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_withdrawal.xml:117: Warning: Hardcoded string "Legal & Privacy", should use @string resource [HardcodedText]
+                    android:text="Legal &amp; Privacy"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_withdrawal.xml:132: Warning: Hardcoded string "Privacy Policy", should use @string resource [HardcodedText]
+                        android:text="Privacy Policy"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_withdrawal.xml:142: Warning: Hardcoded string "Terms", should use @string resource [HardcodedText]
+                        android:text="Terms"
+                        ~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_withdrawal.xml:164: Warning: Hardcoded string "Back", should use @string resource [HardcodedText]
+                android:text="Back"
+                ~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_withdrawal.xml:174: Warning: Hardcoded string "Withdraw", should use @string resource [HardcodedText]
+                android:text="Withdraw"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mustafailahi/Desktop/android-sdk/sdk/src/main/res/layout/activity_withdrawal.xml:183: Warning: Hardcoded string "On withdrawal click/press callback will be exposed to WPS for their side of logic", should use @string resource [HardcodedText]
+            android:text="On withdrawal click/press callback will be exposed to WPS for their side of logic"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+0 errors, 84 warnings

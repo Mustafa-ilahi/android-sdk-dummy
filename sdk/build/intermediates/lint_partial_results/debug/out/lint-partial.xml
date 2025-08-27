@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.2.0" type="partial_results">
+    <map id="UnusedResources">
+        <location id="R.color.divider"
+            file="${:sdk*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="19"
+            column="12"
+            startOffset="684"
+            endLine="19"
+            endColumn="26"
+            endOffset="698"/>
+        <location id="R.color.info"
+            file="${:sdk*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="11"
+            column="12"
+            startOffset="408"
+            endLine="11"
+            endColumn="23"
+            endOffset="419"/>
+        <location id="R.color.primary_light"
+            file="${:sdk*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="5"
+            column="12"
+            startOffset="151"
+            endLine="5"
+            endColumn="32"
+            endOffset="171"/>
+        <location id="R.color.warning"
+            file="${:sdk*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="10"
+            column="12"
+            startOffset="366"
+            endLine="10"
+            endColumn="26"
+            endOffset="380"/>
+        <entry
+            name="model"
+            string="attr[colorPrimaryVariant(R)],color[surface(U),text_primary(U),error(U),accent(U),secondary(U),divider(D),success(U),background(U),warning(D),text_hint(D),primary_dark(U),text_secondary(U),primary(U),primary_light(D),info(D)],drawable[ic_success(U)],id[btnTerms(U),btnBack(U),btnLogout(U),tvEligibility(U),btnGoToHomepage(U),etPassword(U),tvTransactionId(U),btnWithdraw(U),btnWithdrawal(U),tvStatus(U),tvUsername(U),etAmount(U),tvWithdrawalLimit(U),btnLogin(U),tvDailyLimit(U),tvMessage(U),btnPrivacyPolicy(U),tvTransactionHistory(U),etUsername(U),btnExit(U),tvReceipt(U),tvSalary(U)],layout[activity_success(U),activity_user_details(U),activity_withdrawal(U),activity_onboarding(U)],style[Theme_AlternaSDK(U),Theme_MaterialComponents_DayNight_DarkActionBar(R),Widget_MaterialComponents_TextInputLayout_OutlinedBox(R),Widget_MaterialComponents_Button_OutlinedButton(R)];10^7,27^10^7^d^c^2^2e,28^d^2e,29^d^2d^2e^c,2a^d^5^2d^2e^c,2b^2c^d^b^1^4^0^8^2^3;;;"/>
+        <location id="R.color.text_hint"
+            file="${:sdk*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="15"
+            column="12"
+            startOffset="548"
+            endLine="15"
+            endColumn="28"
+            endOffset="564"/>
+    </map>
+
+</incidents>

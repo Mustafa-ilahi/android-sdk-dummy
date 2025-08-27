@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.alterna.sdk-merged_res-47:/animator-v21/design_appbar_state_list_animator.xml",
+        "source": "com.alterna.sdk-material-1.10.0-37:/animator-v21/design_appbar_state_list_animator.xml"
+    },
+    {
+        "merged": "com.alterna.sdk-merged_res-47:/animator-v21/m3_appbar_state_list_animator.xml",
+        "source": "com.alterna.sdk-material-1.10.0-37:/animator-v21/m3_appbar_state_list_animator.xml"
+    }
+]

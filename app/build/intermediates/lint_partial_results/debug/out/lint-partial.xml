@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.2.0" type="partial_results">
+    <map id="UnsafeIntentLaunch">
+            <map id="unprotected">
+                <entry
+                    name="com.alterna.sdk.app.MainActivity"
+                    boolean="true"/>
+            </map>
+    </map>
+    <map id="UnusedResources">
+        <location id="R.color.success"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="8"
+            column="12"
+            startOffset="284"
+            endLine="8"
+            endColumn="26"
+            endOffset="298"/>
+        <location id="R.color.divider"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="19"
+            column="12"
+            startOffset="684"
+            endLine="19"
+            endColumn="26"
+            endOffset="698"/>
+        <location id="R.color.secondary"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="7"
+            column="12"
+            startOffset="240"
+            endLine="7"
+            endColumn="28"
+            endOffset="256"/>
+        <location id="R.color.info"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="11"
+            column="12"
+            startOffset="408"
+            endLine="11"
+            endColumn="23"
+            endOffset="419"/>
+        <location id="R.color.primary_light"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="5"
+            column="12"
+            startOffset="151"
+            endLine="5"
+            endColumn="32"
+            endOffset="171"/>
+        <location id="R.color.warning"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="10"
+            column="12"
+            startOffset="366"
+            endLine="10"
+            endColumn="26"
+            endOffset="380"/>
+        <entry
+            name="model"
+            string="attr[colorPrimaryVariant(R)],color[surface(U),text_primary(U),error(U),accent(U),secondary(D),divider(D),success(D),background(U),warning(D),text_hint(D),primary_dark(U),text_secondary(U),primary(U),primary_light(D),info(D)],drawable[ic_launcher_foreground(U)],id[btnStartSDK(U),btnExitSDK(U),btnShowUserDetails(U),btnShowWithdrawal(U)],layout[activity_main(U)],string[app_name(U)],style[Theme_AlternaSDKApp(U),Theme_MaterialComponents_DayNight_DarkActionBar(R),Widget_MaterialComponents_Button_OutlinedButton(R)],xml[data_extraction_rules(U),backup_rules(U)];10^1^d,15^d^c^19,17^18^d^b^1^4^0^8^2^3;;;"/>
+        <location id="R.color.text_hint"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="15"
+            column="12"
+            startOffset="548"
+            endLine="15"
+            endColumn="28"
+            endOffset="564"/>
+    </map>
+
+</incidents>

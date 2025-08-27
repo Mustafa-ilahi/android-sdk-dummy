@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.alterna.sdk-merged_res-47:/layout-v26/abc_screen_toolbar.xml",
+        "source": "com.alterna.sdk-appcompat-1.6.1-2:/layout-v26/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "com.alterna.sdk-merged_res-47:/layout-v26/mtrl_calendar_month.xml",
+        "source": "com.alterna.sdk-material-1.10.0-37:/layout-v26/mtrl_calendar_month.xml"
+    }
+]

@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.alterna.sdk-mergeReleaseResources-45:/values-port/values-port.xml",
+            "map": [
+                {
+                    "source": "/Users/mustafailahi/.gradle/caches/8.9/transforms/271dcef450bda9e77ebfc5e239a37338/transformed/appcompat-1.6.1/res/values-port/values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.alterna.sdk-merged_res-47:/values-port/values-port.xml",
+            "map": [
+                {
+                    "source": "/Users/mustafailahi/.gradle/caches/8.9/transforms/271dcef450bda9e77ebfc5e239a37338/transformed/appcompat-1.6.1/res/values-port/values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        }
+    ]
+}
