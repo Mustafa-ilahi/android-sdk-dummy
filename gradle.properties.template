@@ -1,0 +1,25 @@
+# Alterna SDK Publishing Configuration Template
+# Copy this file to gradle.properties and fill in your credentials
+
+# GitHub Packages credentials
+# Get these from: https://github.com/settings/tokens
+gpr.user=your_github_username
+gpr.key=your_github_token
+
+# Maven Central credentials (for future use)
+# Get these from: https://s01.oss.sonatype.org/
+ossrhUsername=your_sonatype_username
+ossrhPassword=your_sonatype_password
+
+# Signing configuration (for Maven Central)
+# Get these from your GPG key
+signing.keyId=your_gpg_key_id
+signing.password=your_gpg_password
+signing.secretKeyRingFile=path/to/your/secret.gpg
+
+# Build configuration
+org.gradle.jvmargs=-Xmx2048m -Dfile.encoding=UTF-8
+org.gradle.parallel=true
+org.gradle.caching=true
+android.useAndroidX=true
+android.enableJetifier=true

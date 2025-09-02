@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alterna SDK Integration Sample"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="32dp" />
+
+    <Button
+        android:id="@+id/btn_start_onboarding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Onboarding"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/design_default_color_primary" />
+
+    <Button
+        android:id="@+id/btn_show_user_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show User Details"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/design_default_color_secondary" />
+
+    <Button
+        android:id="@+id/btn_show_withdrawal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Withdrawal Page"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/design_default_color_primary_variant" />
+
+    <Button
+        android:id="@+id/btn_exit_sdk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Exit SDK"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@android:color/holo_red_dark" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Instructions:\n1. Click 'Start Onboarding' to begin\n2. After login, use other buttons\n3. Check logs for detailed information"
+        android:textSize="14sp"
+        android:layout_marginTop="32dp"
+        android:padding="16dp"
+        android:background="@android:color/background_light"
+        android:elevation="2dp" />
+
+</LinearLayout>

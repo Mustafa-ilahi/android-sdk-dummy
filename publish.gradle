@@ -1,0 +1,92 @@
+// Publishing script for Alterna SDK
+// This script can be applied to the SDK module for publishing
+
+apply plugin: 'maven-publish'
+
+// Configure publishing
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                
+                groupId = 'com.alterna'
+                artifactId = 'sdk'
+                version = '1.0.0'
+                
+                pom {
+                    name = 'Alterna SDK'
+                    description = 'Android SDK for Alterna platform integration'
+                    url = 'https://github.com/your-org/alterna-android-sdk'
+                    
+                    licenses {
+                        license {
+                            name = 'The Apache License, Version 2.0'
+                            url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                        }
+                    }
+                    
+                    developers {
+                        developer {
+                            id = 'alterna'
+                            name = 'Alterna Team'
+                            email = 'dev@alterna.com'
+                        }
+                    }
+                    
+                    scm {
+                        connection = 'scm:git:git://github.com/your-org/alterna-android-sdk.git'
+                        developerConnection = 'scm:git:ssh://github.com:your-org/alterna-android-sdk.git'
+                        url = 'https://github.com/your-org/alterna-android-sdk'
+                    }
+                }
+            }
+        }
+        
+        repositories {
+            // GitHub Packages
+            maven {
+                name = "GitHubPackages"
+                url = uri("https://maven.pkg.github.com/your-org/alterna-android-sdk")
+                credentials {
+                    username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+                    password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+                }
+            }
+            
+            // Maven Central (for future use)
+            maven {
+                name = "MavenCentral"
+                url = uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
+                credentials {
+                    username = project.findProperty("ossrhUsername")
+                    password = project.findProperty("ossrhPassword")
+                }
+            }
+        }
+    }
+}
+
+// Task to generate sources JAR
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    archiveClassifier.set('sources')
+}
+
+// Task to generate Javadoc JAR
+task javadocJar(type: Jar) {
+    from javadoc
+    archiveClassifier.set('javadoc')
+}
+
+// Add sources and javadoc to the publication
+afterEvaluate {
+    publishing {
+        publications {
+            release {
+                artifact sourcesJar
+                artifact javadocJar
+            }
+        }
+    }
+}

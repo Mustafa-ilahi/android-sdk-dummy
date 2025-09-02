@@ -12,7 +12,26 @@ import com.alterna.sdk.ui.WithdrawalActivity
 import com.alterna.sdk.ui.SuccessActivity
 
 /**
- * Main SDK class that manages the user flow
+ * Alterna SDK - Main entry point for integrating Alterna services
+ * 
+ * This SDK provides a complete solution for integrating Alterna's user onboarding,
+ * authentication, and withdrawal services into Android applications.
+ * 
+ * ## Features
+ * - User onboarding and authentication
+ * - User session management
+ * - Withdrawal processing with WPS integration
+ * - Success screen handling
+ * 
+ * ## Usage
+ * ```kotlin
+ * val sdk = SDK.getInstance()
+ * sdk.initialize(context, callback)
+ * sdk.startOnboarding(context)
+ * ```
+ * 
+ * @since 1.0.0
+ * @author Alterna Team
  */
 class SDK private constructor() {
     
@@ -20,6 +39,11 @@ class SDK private constructor() {
         @Volatile
         private var INSTANCE: SDK? = null
         
+        /**
+         * Get the singleton instance of the SDK
+         * 
+         * @return The SDK instance
+         */
         fun getInstance(): SDK {
             return INSTANCE ?: synchronized(this) {
                 INSTANCE ?: SDK().also { INSTANCE = it }
@@ -33,6 +57,12 @@ class SDK private constructor() {
     
     /**
      * Initialize the SDK with configuration
+     * 
+     * This method must be called before using any other SDK functionality.
+     * It sets up the SDK with the provided context and callback.
+     * 
+     * @param context The application context
+     * @param callback The SDK callback for handling events
      */
     fun initialize(context: Context, callback: SDKCallback) {
         this.sdkCallback = callback
@@ -41,6 +71,11 @@ class SDK private constructor() {
     
     /**
      * Start the onboarding/login flow (Step 1)
+     * 
+     * Launches the onboarding activity where users can log in or create an account.
+     * This is typically the first method called after SDK initialization.
+     * 
+     * @param context The context to start the activity from
      */
     fun startOnboarding(context: Context) {
         val intent = Intent(context, OnboardingActivity::class.java)
