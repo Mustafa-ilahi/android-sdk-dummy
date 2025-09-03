@@ -4,7 +4,7 @@
             "outputFile": "com.alterna.sdk-mergeReleaseResources-45:/values-v22/values-v22.xml",
             "map": [
                 {
-                    "source": "/Users/mustafailahi/.gradle/caches/8.9/transforms/271dcef450bda9e77ebfc5e239a37338/transformed/appcompat-1.6.1/res/values-v22/values-v22.xml",
+                    "source": "/Users/mustafailahi/.gradle/caches/8.9/transforms/27482a1e3ab3b9dfce600de5782c8518/transformed/appcompat-1.6.1/res/values-v22/values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",
@@ -20,7 +20,7 @@
             "outputFile": "com.alterna.sdk-merged_res-47:/values-v22/values-v22.xml",
             "map": [
                 {
-                    "source": "/Users/mustafailahi/.gradle/caches/8.9/transforms/271dcef450bda9e77ebfc5e239a37338/transformed/appcompat-1.6.1/res/values-v22/values-v22.xml",
+                    "source": "/Users/mustafailahi/.gradle/caches/8.9/transforms/27482a1e3ab3b9dfce600de5782c8518/transformed/appcompat-1.6.1/res/values-v22/values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",

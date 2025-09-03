@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'maven-publish'
+    id 'signing'
 }
 
 android {
@@ -43,55 +44,78 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.2'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.7.4'
     implementation 'androidx.navigation:navigation-ui-ktx:2.7.4'
-    
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }
 
-// Publishing configuration
+// Generate sources JAR
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    archiveClassifier.set('sources')
+}
+
+// Generate javadoc JAR
+task javadocJar(type: Jar) {
+    archiveClassifier.set('javadoc')
+    // For Android libraries, we'll create a simple javadoc JAR with source files
+    // In a real scenario, you might want to generate actual javadoc
+    from android.sourceSets.main.java.srcDirs
+}
+
 afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
                 from components.release
-                
-                groupId = 'com.alterna'
+
+                groupId = 'io.github.mustafa-ilahi'
                 artifactId = 'sdk'
                 version = '1.0.0'
-                
+
+                // Add sources and javadoc JARs
+                artifact sourcesJar
+                artifact javadocJar
+
                 pom {
-                    name = 'Alterna SDK'
-                    description = 'Android SDK for Alterna platform integration'
-                    url = 'https://github.com/your-org/alterna-android-sdk'
-                    
+                    name.set("Alterna SDK")
+                    description.set("Android SDK for Alterna platform integration")
+                    url.set("https://github.com/mustafa-ilahi/android-sdk")
+
                     licenses {
                         license {
-                            name = 'The Apache License, Version 2.0'
-                            url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                            name.set("The Apache License, Version 2.0")
+                            url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
                         }
                     }
-                    
+
                     developers {
                         developer {
-                            id = 'alterna'
-                            name = 'Alterna Team'
-                            email = 'dev@alterna.com'
+                            id.set("mustafa-ilahi")
+                            name.set("Mustafa Ilahi")
+                            email.set("mustafa@example.com")
                         }
+                    }
+
+                    scm {
+                        connection.set("scm:git:git://github.com/mustafa-ilahi/android-sdk.git")
+                        developerConnection.set("scm:git:ssh://github.com/mustafa-ilahi/android-sdk.git")
+                        url.set("https://github.com/mustafa-ilahi/android-sdk")
                     }
                 }
             }
         }
+    }
+
+    signing {
+        // Configure GPG signing for Maven Central
+        def signingKeyId = project.findProperty("signing.keyId")
+        def signingKey = project.findProperty("signing.secretKeyRingFile")
+        def signingPassword = project.findProperty("signing.password")
         
-        repositories {
-            maven {
-                name = "GitHubPackages"
-                url = uri("https://maven.pkg.github.com/your-org/alterna-android-sdk")
-                credentials {
-                    username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
-                    password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
-                }
-            }
+        if (signingKeyId && signingKey && signingPassword) {
+            sign publishing.publications.release
         }
     }
 }

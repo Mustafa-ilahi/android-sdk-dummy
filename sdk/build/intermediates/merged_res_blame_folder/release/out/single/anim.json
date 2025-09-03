@@ -13,7 +13,7 @@
     },
     {
         "merged": "com.alterna.sdk-merged_res-47:/anim/nav_default_exit_anim.xml",
-        "source": "com.alterna.sdk-navigation-ui-2.7.4-0:/anim/nav_default_exit_anim.xml"
+        "source": "com.alterna.sdk-navigation-ui-2.7.4-8:/anim/nav_default_exit_anim.xml"
     },
     {
         "merged": "com.alterna.sdk-merged_res-47:/anim/btn_radio_to_off_mtrl_ring_outer_animation.xml",
@@ -33,11 +33,11 @@
     },
     {
         "merged": "com.alterna.sdk-merged_res-47:/anim/m3_motion_fade_exit.xml",
-        "source": "com.alterna.sdk-material-1.10.0-37:/anim/m3_motion_fade_exit.xml"
+        "source": "com.alterna.sdk-material-1.10.0-15:/anim/m3_motion_fade_exit.xml"
     },
     {
         "merged": "com.alterna.sdk-merged_res-47:/anim/mtrl_card_lowers_interpolator.xml",
-        "source": "com.alterna.sdk-material-1.10.0-37:/anim/mtrl_card_lowers_interpolator.xml"
+        "source": "com.alterna.sdk-material-1.10.0-15:/anim/mtrl_card_lowers_interpolator.xml"
     },
     {
         "merged": "com.alterna.sdk-merged_res-47:/anim/btn_radio_to_on_mtrl_ring_outer_path_animation.xml",
@@ -53,7 +53,7 @@
     },
     {
         "merged": "com.alterna.sdk-merged_res-47:/anim/linear_indeterminate_line2_tail_interpolator.xml",
-        "source": "com.alterna.sdk-material-1.10.0-37:/anim/linear_indeterminate_line2_tail_interpolator.xml"
+        "source": "com.alterna.sdk-material-1.10.0-15:/anim/linear_indeterminate_line2_tail_interpolator.xml"
     },
     {
         "merged": "com.alterna.sdk-merged_res-47:/anim/abc_slide_in_top.xml",
@@ -61,7 +61,7 @@
     },
     {
         "merged": "com.alterna.sdk-merged_res-47:/anim/m3_motion_fade_enter.xml",
-        "source": "com.alterna.sdk-material-1.10.0-37:/anim/m3_motion_fade_enter.xml"
+        "source": "com.alterna.sdk-material-1.10.0-15:/anim/m3_motion_fade_enter.xml"
     },
     {
         "merged": "com.alterna.sdk-merged_res-47:/anim/btn_checkbox_to_checked_box_inner_merged_animation.xml",
@@ -73,7 +73,7 @@
     },
     {
         "merged": "com.alterna.sdk-merged_res-47:/anim/nav_default_pop_exit_anim.xml",
-        "source": "com.alterna.sdk-navigation-ui-2.7.4-0:/anim/nav_default_pop_exit_anim.xml"
+        "source": "com.alterna.sdk-navigation-ui-2.7.4-8:/anim/nav_default_pop_exit_anim.xml"
     },
     {
         "merged": "com.alterna.sdk-merged_res-47:/anim/btn_radio_to_off_mtrl_dot_group_animation.xml",
@@ -81,7 +81,7 @@
     },
     {
         "merged": "com.alterna.sdk-merged_res-47:/anim/linear_indeterminate_line2_head_interpolator.xml",
-        "source": "com.alterna.sdk-material-1.10.0-37:/anim/linear_indeterminate_line2_head_interpolator.xml"
+        "source": "com.alterna.sdk-material-1.10.0-15:/anim/linear_indeterminate_line2_head_interpolator.xml"
     },
     {
         "merged": "com.alterna.sdk-merged_res-47:/anim/abc_grow_fade_in_from_bottom.xml",
@@ -109,7 +109,7 @@
     },
     {
         "merged": "com.alterna.sdk-merged_res-47:/anim/nav_default_pop_enter_anim.xml",
-        "source": "com.alterna.sdk-navigation-ui-2.7.4-0:/anim/nav_default_pop_enter_anim.xml"
+        "source": "com.alterna.sdk-navigation-ui-2.7.4-8:/anim/nav_default_pop_enter_anim.xml"
     },
     {
         "merged": "com.alterna.sdk-merged_res-47:/anim/abc_popup_enter.xml",
@@ -121,11 +121,11 @@
     },
     {
         "merged": "com.alterna.sdk-merged_res-47:/anim/design_snackbar_in.xml",
-        "source": "com.alterna.sdk-material-1.10.0-37:/anim/design_snackbar_in.xml"
+        "source": "com.alterna.sdk-material-1.10.0-15:/anim/design_snackbar_in.xml"
     },
     {
         "merged": "com.alterna.sdk-merged_res-47:/anim/linear_indeterminate_line1_tail_interpolator.xml",
-        "source": "com.alterna.sdk-material-1.10.0-37:/anim/linear_indeterminate_line1_tail_interpolator.xml"
+        "source": "com.alterna.sdk-material-1.10.0-15:/anim/linear_indeterminate_line1_tail_interpolator.xml"
     },
     {
         "merged": "com.alterna.sdk-merged_res-47:/anim/abc_slide_out_bottom.xml",
@@ -133,11 +133,11 @@
     },
     {
         "merged": "com.alterna.sdk-merged_res-47:/anim/nav_default_enter_anim.xml",
-        "source": "com.alterna.sdk-navigation-ui-2.7.4-0:/anim/nav_default_enter_anim.xml"
+        "source": "com.alterna.sdk-navigation-ui-2.7.4-8:/anim/nav_default_enter_anim.xml"
     },
     {
         "merged": "com.alterna.sdk-merged_res-47:/anim/linear_indeterminate_line1_head_interpolator.xml",
-        "source": "com.alterna.sdk-material-1.10.0-37:/anim/linear_indeterminate_line1_head_interpolator.xml"
+        "source": "com.alterna.sdk-material-1.10.0-15:/anim/linear_indeterminate_line1_head_interpolator.xml"
     },
     {
         "merged": "com.alterna.sdk-merged_res-47:/anim/abc_fade_in.xml",
@@ -145,6 +145,6 @@
     },
     {
         "merged": "com.alterna.sdk-merged_res-47:/anim/design_snackbar_out.xml",
-        "source": "com.alterna.sdk-material-1.10.0-37:/anim/design_snackbar_out.xml"
+        "source": "com.alterna.sdk-material-1.10.0-15:/anim/design_snackbar_out.xml"
     }
 ]

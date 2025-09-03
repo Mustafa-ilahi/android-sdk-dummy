@@ -4,7 +4,7 @@
             "outputFile": "com.alterna.sdk-merged_res-47:/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
-                    "source": "/Users/mustafailahi/.gradle/caches/8.9/transforms/cb813447d44164e384d2e1a4fb410fbc/transformed/material-1.10.0/res/values-ldrtl-v17/values-ldrtl-v17.xml",
+                    "source": "/Users/mustafailahi/.gradle/caches/8.9/transforms/6ce90f1d4620fd171929613f2bfc7b54/transformed/material-1.10.0/res/values-ldrtl-v17/values-ldrtl-v17.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -19,7 +19,7 @@
             "outputFile": "com.alterna.sdk-mergeReleaseResources-45:/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
-                    "source": "/Users/mustafailahi/.gradle/caches/8.9/transforms/cb813447d44164e384d2e1a4fb410fbc/transformed/material-1.10.0/res/values-ldrtl-v17/values-ldrtl-v17.xml",
+                    "source": "/Users/mustafailahi/.gradle/caches/8.9/transforms/6ce90f1d4620fd171929613f2bfc7b54/transformed/material-1.10.0/res/values-ldrtl-v17/values-ldrtl-v17.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

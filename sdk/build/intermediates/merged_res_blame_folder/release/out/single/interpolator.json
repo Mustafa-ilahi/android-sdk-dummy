@@ -29,6 +29,6 @@
     },
     {
         "merged": "com.alterna.sdk-merged_res-47:/interpolator/mtrl_linear.xml",
-        "source": "com.alterna.sdk-material-1.10.0-37:/interpolator/mtrl_linear.xml"
+        "source": "com.alterna.sdk-material-1.10.0-15:/interpolator/mtrl_linear.xml"
     }
 ]

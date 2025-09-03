@@ -4,7 +4,7 @@
             "outputFile": "com.alterna.sdk-merged_res-47:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/mustafailahi/.gradle/caches/8.9/transforms/cb813447d44164e384d2e1a4fb410fbc/transformed/material-1.10.0/res/values-night-v8/values-night-v8.xml",
+                    "source": "/Users/mustafailahi/.gradle/caches/8.9/transforms/6ce90f1d4620fd171929613f2bfc7b54/transformed/material-1.10.0/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/mustafailahi/.gradle/caches/8.9/transforms/271dcef450bda9e77ebfc5e239a37338/transformed/appcompat-1.6.1/res/values-night-v8/values-night-v8.xml",
+                    "source": "/Users/mustafailahi/.gradle/caches/8.9/transforms/27482a1e3ab3b9dfce600de5782c8518/transformed/appcompat-1.6.1/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -43,7 +43,7 @@
             "outputFile": "com.alterna.sdk-mergeReleaseResources-45:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/mustafailahi/.gradle/caches/8.9/transforms/cb813447d44164e384d2e1a4fb410fbc/transformed/material-1.10.0/res/values-night-v8/values-night-v8.xml",
+                    "source": "/Users/mustafailahi/.gradle/caches/8.9/transforms/6ce90f1d4620fd171929613f2bfc7b54/transformed/material-1.10.0/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -60,7 +60,7 @@
                     }
                 },
                 {
-                    "source": "/Users/mustafailahi/.gradle/caches/8.9/transforms/271dcef450bda9e77ebfc5e239a37338/transformed/appcompat-1.6.1/res/values-night-v8/values-night-v8.xml",
+                    "source": "/Users/mustafailahi/.gradle/caches/8.9/transforms/27482a1e3ab3b9dfce600de5782c8518/transformed/appcompat-1.6.1/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
