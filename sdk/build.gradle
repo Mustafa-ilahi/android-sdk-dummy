@@ -20,6 +20,15 @@ android {
         consumerProguardFiles "consumer-rules.pro"
     }
 
+    // Set the AAR file name to follow Maven Central convention
+    libraryVariants.all { variant ->
+        variant.outputs.all { output ->
+            if (outputFile != null && outputFileName.endsWith('.aar')) {
+                outputFileName = "sdk-1.0.0.aar"
+            }
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -50,19 +59,30 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }
 
-// Generate sources JAR
-task sourcesJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    archiveClassifier.set('sources')
-}
-
 // Generate javadoc JAR
 task javadocJar(type: Jar) {
     archiveClassifier.set('javadoc')
+    archiveBaseName.set('sdk')
+    archiveVersion.set('1.0.0')
     // For Android libraries, we'll create a simple javadoc JAR with source files
     // In a real scenario, you might want to generate actual javadoc
     from android.sourceSets.main.java.srcDirs
 }
+
+// Task to rename POM file to follow Maven Central naming convention
+task renamePomFile {
+    doLast {
+        def pomFile = file("${project.buildDir}/publications/release/pom-default.xml")
+        def renamedPomFile = file("${project.buildDir}/publications/release/sdk-1.0.0.pom")
+        if (pomFile.exists()) {
+            pomFile.renameTo(renamedPomFile)
+            println "Renamed POM file to: ${renamedPomFile.name}"
+        }
+    }
+}
+
+// Make renamePomFile run after publishToMavenLocal
+publishToMavenLocal.finalizedBy renamePomFile
 
 afterEvaluate {
     publishing {
@@ -74,8 +94,7 @@ afterEvaluate {
                 artifactId = 'sdk'
                 version = '1.0.0'
 
-                // Add sources and javadoc JARs
-                artifact sourcesJar
+                // Add javadoc JAR (sources are already included by components.release)
                 artifact javadocJar
 
                 pom {

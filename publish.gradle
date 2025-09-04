@@ -67,26 +67,5 @@ afterEvaluate {
     }
 }
 
-// Task to generate sources JAR
-task sourcesJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    archiveClassifier.set('sources')
-}
-
-// Task to generate Javadoc JAR
-task javadocJar(type: Jar) {
-    from javadoc
-    archiveClassifier.set('javadoc')
-}
-
-// Add sources and javadoc to the publication
-afterEvaluate {
-    publishing {
-        publications {
-            release {
-                artifact sourcesJar
-                artifact javadocJar
-            }
-        }
-    }
-}
+// Sources and javadoc JARs are defined in sdk/build.gradle
+// This file only contains repository configurations

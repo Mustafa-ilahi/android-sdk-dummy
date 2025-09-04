@@ -1,0 +1,152 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.github.mustafa-ilahi",
+    "module": "sdk",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.9"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "sdk-1.0.0.aar",
+          "url": "sdk-1.0.0.aar",
+          "size": 42753,
+          "sha512": "2b907384aab7637a02d158bbe68bc15a7d57218f870dfbe364b03a10813b0354f2839195d11a03d82b6fbc08624941313d80dbebb39d44f8d3cc0c57405844d5",
+          "sha256": "fa8e2bb669be39cb8d7fe9204c5f27fa303f805bd06568a2c5518bd0b2e01f67",
+          "sha1": "e27df595ead57cc224501be19362a434ed66ec37",
+          "md5": "17c4757f430a3bed1b8683edce3cf7ed"
+        }
+      ]
+    },
+    {
+      "name": "releaseRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.core",
+          "module": "core-ktx",
+          "version": {
+            "requires": "1.12.0"
+          }
+        },
+        {
+          "group": "androidx.appcompat",
+          "module": "appcompat",
+          "version": {
+            "requires": "1.6.1"
+          }
+        },
+        {
+          "group": "com.google.android.material",
+          "module": "material",
+          "version": {
+            "requires": "1.10.0"
+          }
+        },
+        {
+          "group": "androidx.constraintlayout",
+          "module": "constraintlayout",
+          "version": {
+            "requires": "2.1.4"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-viewmodel-ktx",
+          "version": {
+            "requires": "2.6.2"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-livedata-ktx",
+          "version": {
+            "requires": "2.6.2"
+          }
+        },
+        {
+          "group": "androidx.navigation",
+          "module": "navigation-fragment-ktx",
+          "version": {
+            "requires": "2.7.4"
+          }
+        },
+        {
+          "group": "androidx.navigation",
+          "module": "navigation-ui-ktx",
+          "version": {
+            "requires": "2.7.4"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "sdk-1.0.0.aar",
+          "url": "sdk-1.0.0.aar",
+          "size": 42753,
+          "sha512": "2b907384aab7637a02d158bbe68bc15a7d57218f870dfbe364b03a10813b0354f2839195d11a03d82b6fbc08624941313d80dbebb39d44f8d3cc0c57405844d5",
+          "sha256": "fa8e2bb669be39cb8d7fe9204c5f27fa303f805bd06568a2c5518bd0b2e01f67",
+          "sha1": "e27df595ead57cc224501be19362a434ed66ec37",
+          "md5": "17c4757f430a3bed1b8683edce3cf7ed"
+        }
+      ]
+    },
+    {
+      "name": "releaseSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "files": [
+        {
+          "name": "sdk-1.0.0-sources.jar",
+          "url": "sdk-1.0.0-sources.jar",
+          "size": 20607,
+          "sha512": "e3451f36934b32310a2670b55e4836a3c3c268a47230b6db8613942f29b5cb09246bfa53507bbb93d5d38d45dcbfe67540f345e69f16a132d66f5847c04a6147",
+          "sha256": "93a3784524f386995f7f5e295a4ad0085cf4948aa01c909b0f0069761999657a",
+          "sha1": "056aab598313d98a49e6a4d9a3bd31edd25df82d",
+          "md5": "7a735396cc538fa304f4b72a8eb45aed"
+        }
+      ]
+    }
+  ]
+}
